@@ -1,0 +1,25 @@
+<div class="dashboard">
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Designation</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeeArr;let i = index">
+        <td>{{employee.name}}</td>
+        <td>{{employee.designation}}</td>
+        <td>{{employee.salary}}</td>
+        <td><i (click)="editInfo(employee,i)" data-toggle="tooltip" title="Edit" tooltip="edit" class="fa fa-edit"></i>
+            <i style="margin-left: 8%;" (click)="delete(i)" data-toggle="tooltip" title="Delete" tooltip="delete" class="fa fa-trash"></i>
+        </td>
+        
+      </tr>
+    </tbody>
+  </table>
+</div>
